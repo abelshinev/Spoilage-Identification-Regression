@@ -1,0 +1,18 @@
+{
+  "BCG": {
+    "hue_fresh":   75,
+    "hue_spoiled": 215,
+    "direction":   "ascending"
+  },
+  "BTB": {
+    "hue_fresh":   220,
+    "hue_spoiled": 55,
+    "direction":   "descending"
+  },
+  "KMNO4": {
+    "sat_fresh":   150,
+    "direction":   "saturation_collapse"
+  },
+  "temp_scale_factor": 1.0,
+  "kmno4_sat_fresh_tunable": 150
+}
