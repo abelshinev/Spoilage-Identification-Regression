@@ -1,18 +1,18 @@
 {
   "BCG": {
-    "hue_fresh":   75,
+    "hue_fresh": 75,
     "hue_spoiled": 215,
-    "direction":   "ascending"
+    "direction": "ascending"
   },
   "BTB": {
-    "hue_fresh":   220,
+    "hue_fresh": 220,
     "hue_spoiled": 55,
-    "direction":   "descending"
+    "direction": "descending"
   },
   "KMNO4": {
-    "sat_fresh":   150,
-    "direction":   "saturation_collapse"
+    "hue_fresh": 310,
+    "hue_spoiled": 25,
+    "direction": "circular_hue"
   },
-  "temp_scale_factor": 1.0,
-  "kmno4_sat_fresh_tunable": 150
+  "temp_scale_factor": 1.0
 }

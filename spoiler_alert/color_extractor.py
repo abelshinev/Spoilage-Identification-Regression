@@ -11,7 +11,8 @@ BCG_HUE_FRESH = 75
 BCG_HUE_SPOILED = 215
 BTB_HUE_FRESH = 220
 BTB_HUE_SPOILED = 55
-KMNO4_SAT_FRESH = 150
+KMNO4_HUE_FRESH = 310      # magenta (fresh)
+KMNO4_HUE_SPOILED = 25     # brown (spoiled)
 BORDER_TRIM = 5
 
 # Attempt to load score_config.json from current directory or parent directory
@@ -33,7 +34,8 @@ if SCORE_CONFIG:
     BCG_HUE_SPOILED = SCORE_CONFIG.get("BCG", {}).get("hue_spoiled", BCG_HUE_SPOILED)
     BTB_HUE_FRESH = SCORE_CONFIG.get("BTB", {}).get("hue_fresh", BTB_HUE_FRESH)
     BTB_HUE_SPOILED = SCORE_CONFIG.get("BTB", {}).get("hue_spoiled", BTB_HUE_SPOILED)
-    KMNO4_SAT_FRESH = SCORE_CONFIG.get("KMNO4", {}).get("sat_fresh", KMNO4_SAT_FRESH)
+    KMNO4_HUE_FRESH = SCORE_CONFIG.get("KMNO4", {}).get("hue_fresh", KMNO4_HUE_FRESH)
+    KMNO4_HUE_SPOILED = SCORE_CONFIG.get("KMNO4", {}).get("hue_spoiled", KMNO4_HUE_SPOILED)
 
 def get_status(score):
     if score < 0.3:
@@ -117,8 +119,16 @@ def extract_colors(image: np.ndarray) -> dict:
             spoilage_score = float(1.0 - np.clip(val, 0, 1))
         
         elif name == "KMNO4":
-            val = S / KMNO4_SAT_FRESH
-            spoilage_score = float(1.0 - np.clip(val, 0, 1))
+            
+            def circular_hue_distance(a, b):
+                """Calculate shortest angular distance between two hues (0-360)."""
+                d = abs(a - b)
+                return min(d, 360 - d)
+            
+            total_range = circular_hue_distance(KMNO4_HUE_FRESH, KMNO4_HUE_SPOILED)
+            current_distance = circular_hue_distance(H_360, KMNO4_HUE_FRESH)
+            
+            spoilage_score = float(np.clip(current_distance / total_range, 0, 1))
 
         results[name] = {
             "R": float(R), "G": float(G), "B": float(B),
