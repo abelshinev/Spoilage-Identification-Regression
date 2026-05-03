@@ -1,0 +1,82 @@
+[
+  {
+    "item_id": "test_item_000",
+    "features": {
+      "hours_elapsed": 48.0,
+      "current_score": 0.6218181818181817,
+      "mean_rate": 0.012499999999999997,
+      "max_rate": 0.012499999999999999,
+      "rate_trend": -1.4456028966473392e-19,
+      "bcg_score": 0.6,
+      "btb_score": 0.6363636363636364,
+      "kmno4_score": 0.6,
+      "dominant_sticker": 1,
+      "food_category": 0
+    },
+    "label": 52.0
+  },
+  {
+    "item_id": "test_item_001",
+    "features": {
+      "hours_elapsed": 48.0,
+      "current_score": 0.6218181818181817,
+      "mean_rate": 0.012499999999999997,
+      "max_rate": 0.012499999999999999,
+      "rate_trend": -1.4456028966473392e-19,
+      "bcg_score": 0.6,
+      "btb_score": 0.6363636363636364,
+      "kmno4_score": 0.6,
+      "dominant_sticker": 1,
+      "food_category": 0
+    },
+    "label": 52.0
+  },
+  {
+    "item_id": "test_item_002",
+    "features": {
+      "hours_elapsed": 48.0,
+      "current_score": 0.6218181818181817,
+      "mean_rate": 0.012499999999999997,
+      "max_rate": 0.012499999999999999,
+      "rate_trend": -1.4456028966473392e-19,
+      "bcg_score": 0.6,
+      "btb_score": 0.6363636363636364,
+      "kmno4_score": 0.6,
+      "dominant_sticker": 1,
+      "food_category": 0
+    },
+    "label": 52.0
+  },
+  {
+    "item_id": "test_item_003",
+    "features": {
+      "hours_elapsed": 48.0,
+      "current_score": 0.6218181818181817,
+      "mean_rate": 0.012499999999999997,
+      "max_rate": 0.012499999999999999,
+      "rate_trend": -1.4456028966473392e-19,
+      "bcg_score": 0.6,
+      "btb_score": 0.6363636363636364,
+      "kmno4_score": 0.6,
+      "dominant_sticker": 1,
+      "food_category": 0
+    },
+    "label": 52.0
+  },
+  {
+    "item_id": "test_item_004",
+    "features": {
+      "hours_elapsed": 48.0,
+      "current_score": 0.6218181818181817,
+      "mean_rate": 0.012499999999999997,
+      "max_rate": 0.012499999999999999,
+      "rate_trend": -1.4456028966473392e-19,
+      "bcg_score": 0.6,
+      "btb_score": 0.6363636363636364,
+      "kmno4_score": 0.6,
+      "dominant_sticker": 1,
+      "food_category": 0
+    },
+    "label": 52.0
+  }
+]

@@ -1,4 +1,5 @@
-*.pkl
+test*
+*.jpeg
 *.csv
 __pycache__/
 *.pyc
